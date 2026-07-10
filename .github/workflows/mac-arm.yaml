@@ -18,7 +18,7 @@ jobs:
     - name: check that python eex exist
       run: brew uninstall --ignore-dependencies python3
     - name: check that python eex exist
-      run: ls /usr/bin/python3
+      run: ls /Library/Frameworks/Python.framework/Versions/
     - name: install numpy
       run: python3 -m pip install --break-system-packages numpy
     - name: Run OpenCV CMake Configuration
