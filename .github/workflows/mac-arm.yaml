@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: 'habib-source/opencv'
-        ref: '229559cc4665c9c87968369b4d5525046d962d79'
+        ref: 'FindPython'
     - name: Purge Python Framework Versions
       run: sudo rm -rf /Library/Frameworks/Python.framework/Versions/*
     - name: check that python eex exist
