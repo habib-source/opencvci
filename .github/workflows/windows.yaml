@@ -18,3 +18,5 @@ jobs:
       run: pip install numpy
     - name: Run OpenCV CMake Configuration
       run: cmake -B build -DBUILD_opencv_python3=ON -DBUILD_opencv_python2=OFF -DBUILD_opencv_java=OFF -DINSTALL_CREATE_DISTRIB=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DPython3_LIMITED_API=ON -DBUILD_OPENEXR=ON -DOPENCV_Python3_INSTALL_PATH=python
+    - name: check for chared lib
+      run: ls C:/hostedtoolcache/windows/Python/3.14.6/lib/
