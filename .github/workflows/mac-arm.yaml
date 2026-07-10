@@ -14,14 +14,6 @@ jobs:
       with:
         repository: 'habib-source/opencv'
         ref: 'FindPython'
-
-    - name: check that python eex exist
-      run: brew uninstall --ignore-dependencies python3
-    - name: Sanitize PATH (Remove Homebrew/Global tools)
-      run: |
-        # Reconstruct a minimal PATH containing only core macOS bins and Xcode
-        echo "PATH=/usr/bin:/bin:/usr/sbin:/sbin:$(xcode-select -p)/usr/bin" >> $GITHUB_PATH
-
     - name: Verify Environment
       run: |
         which python3
@@ -29,4 +21,4 @@ jobs:
     - name: install numpy
       run: python3 -m pip install numpy
     - name: Run OpenCV CMake Configuration
-      run: cmake -B build -DBUILD_opencv_python3=ON -DPython3_FIND_FRAMEWORK=FIRST -DBUILD_opencv_java=OFF -DINSTALL_CREATE_DISTRIB=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DPython3_LIMITED_API=ON -DBUILD_OPENEXR=ON -DOPENCV_Python3_INSTALL_PATH=python
+      run: cmake -B build -DBUILD_opencv_python3=ON -DBUILD_opencv_java=OFF -DINSTALL_CREATE_DISTRIB=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DPython3_LIMITED_API=ON -DBUILD_OPENEXR=ON -DOPENCV_Python3_INSTALL_PATH=python -DCMAKE_FIND_FRAMEWORK=ONLY -DCMAKE_FIND_APPBUNDLE=ONLY
