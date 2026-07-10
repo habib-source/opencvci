@@ -18,6 +18,9 @@ jobs:
       run: sudo rm -rf /Library/Frameworks/Python.framework/Versions/*
     - name: check that python eex exist
       run: brew uninstall --ignore-dependencies python3
+
+    - name: check that python eex exist
+      run: sudo rm -rf /opt/homebrew/Frameworks/Python.framework/
     - name: Verify Environment
       run: |
         which python3
