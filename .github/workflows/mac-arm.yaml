@@ -14,15 +14,12 @@ jobs:
       with:
         repository: 'habib-source/opencv'
         ref: 'FindPython'
-    - name: Purge Python Framework Versions
-      run: sudo rm -rf /Library/Frameworks/Python.framework/Versions/*
-    - name: check that python eex exist
-      run: brew uninstall --ignore-dependencies python3
-
-    - name: check that python eex exist
-      run: sudo rm -rf /opt/homebrew/Frameworks/Python.framework/
-    - name: check that python eex exist
-      run: sudo rm -rf /opt/homebrew/pyth*
+    - name: Delete all python vertions except xcode python
+      run: |
+        brew uninstall --ignore-dependencies python3
+        sudo rm -rf /opt/homebrew/Frameworks/Python.framework/
+        sudo rm -rf /opt/homebrew/pyth*
+        sudo rm -rf /Library/Frameworks/Python.framework/Versions/*
     - name: Verify Environment
       run: |
         which python3
