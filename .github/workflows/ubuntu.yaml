@@ -1,4 +1,4 @@
-name: test opencv build on macos
+name: test opencv build on ubuntu
 
 on:
   workflow_dispatch:
