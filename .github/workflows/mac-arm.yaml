@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: 'habib-source/opencv'
-        ref: 'FindPython'
+        ref: '117472b4378dd0663839c1bc6846f6b8f9e859a6'
     - name: Delete all python vertions except xcode python
       run: |
         brew uninstall --ignore-dependencies python3
