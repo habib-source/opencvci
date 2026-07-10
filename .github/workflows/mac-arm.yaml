@@ -25,4 +25,4 @@ jobs:
     - name: install numpy
       run: python3 -m pip install numpy
     - name: Run OpenCV CMake Configuration
-      run: cmake -B build -DBUILD_opencv_python3=ON -DBUILD_opencv_java=OFF -DINSTALL_CREATE_DISTRIB=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DPython3_LIMITED_API=ON -DBUILD_OPENEXR=ON -DOPENCV_Python3_INSTALL_PATH=python -DCMAKE_FIND_FRAMEWORK=ONLY -DCMAKE_FIND_APPBUNDLE=ONLY
+      run: cmake -B build -DBUILD_opencv_python3=ON -DBUILD_opencv_java=OFF -DINSTALL_CREATE_DISTRIB=ON -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DPython3_LIMITED_API=ON -DBUILD_OPENEXR=ON -DOPENCV_Python3_INSTALL_PATH=python
