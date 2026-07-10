@@ -21,6 +21,4 @@ jobs:
     - name: check for chared lib
       run: ls /opt/homebrew/Frameworks/Python.framework/Versions/3.14/lib/
     - name: check for chared lib
-      run: ls /opt/homebrew/Frameworks/Python.framework/Versions/3.14/site-packages/numpy/_core/
-    - name: check for chared lib
       run: ls /opt/homebrew/Frameworks/Python.framework/Versions/3.14/site-packages/numpy/

@@ -21,6 +21,4 @@ jobs:
     - name: check for chared lib
       run: ls C:/hostedtoolcache/windows/Python/3.14.6/lib/
     - name: check for chared lib
-      run: ls C:/hostedtoolcache/windows/Python/3.14.6/lib/site-packages/numpy/_core/
-    - name: check for chared lib
       run: ls C:/hostedtoolcache/windows/Python/3.14.6/lib/site-packages/
