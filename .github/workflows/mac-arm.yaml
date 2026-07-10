@@ -13,12 +13,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: 'habib-source/opencv'
-        ref: 'FindPython'
-
-    - name: check that python eex exist
-      run: brew uninstall --ignore-dependencies python3
-    - name: check that python eex exist
-      run: rm -r /Library/Frameworks/Python.framework/Versions/
+        ref: '383413c7572401e172820d5e5675f92061f56157'
     - name: install numpy
       run: python3 -m pip install --break-system-packages numpy
     - name: Run OpenCV CMake Configuration
