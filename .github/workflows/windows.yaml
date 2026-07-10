@@ -14,6 +14,10 @@ jobs:
       with:
         repository: 'habib-source/opencv'
         ref: 'FindPython'
+    - name: Set up Python
+      uses: actions/setup-python
+      with:
+        python-version: '3.12'
     - name: install numpy
       run: python3 -m pip install numpy
     - name: Run OpenCV CMake Configuration
