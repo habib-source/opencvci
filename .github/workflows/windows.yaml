@@ -1,9 +1,9 @@
 name: test opencv build on windows
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 * * * *'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   run-ci:
