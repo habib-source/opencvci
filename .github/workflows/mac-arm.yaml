@@ -11,6 +11,11 @@ jobs:
       with:
         repository: 'habib-source/opencv'
         ref: 'FindPython'
+    - name: Set Xcode Python as Default
+      run: |
+        # Locate active Xcode Developer directory and prepend its usr/bin to PATH
+        XCODE_PATH="$(xcode-select -p)/usr/bin"
+        echo "$XCODE_PATH" >> $GITHUB_PATH
     - name: Verify Environment
       run: |
         which python3
