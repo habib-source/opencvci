@@ -1,9 +1,6 @@
 name: test opencv build on windows
 
-on:
-  pull_request:
-    branches:
-      - main
+on: push
 
 jobs:
   run-ci:
