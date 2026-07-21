@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: 'habib-source/opencv'
-        ref: 'FindPython'
+        ref: 'FindPythoncmake20'
     - name: Set Xcode Python as Default
       run: |
         # Locate active Xcode Developer directory and prepend its usr/bin to PATH
